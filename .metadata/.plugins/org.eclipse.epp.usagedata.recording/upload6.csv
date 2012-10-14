@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui",1350215580674
+started,bundle,org.eclipse.jdt.debug.ui,3.4.1.v20090811_r351,"org.eclipse.jdt.debug.ui",1350215580895
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jface"".",1350215581426
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215581629
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215587917
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.properties",1350215587979
+started,bundle,org.eclipse.wst.server.core,1.1.102.v20090825,"org.eclipse.wst.server.core",1350215588406
+started,bundle,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.ui",1350215588459
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1350215596604
+opened,view,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.PropertySheet",1350215613295
+activated,view,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.PropertySheet",1350215613307
+executed,command,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.properties.NewPropertySheetCommand",1350215613309
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1350215616569
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jface"".",1350215619392
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215619590
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215625091
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.properties",1350215625136
+started,bundle,org.eclipse.wst.ws.service.policy,1.0.103.v200905151848,"org.eclipse.wst.ws.service.policy",1350215627019
+started,bundle,org.eclipse.wst.command.env,1.0.408.v200903110045,"org.eclipse.wst.command.env",1350215627061
+started,bundle,org.eclipse.wst.ws,1.1.103.v200903111822,"org.eclipse.wst.ws",1350215627061
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.0.v20090513-2000,"org.eclipse.ltk.core.refactoring",1350215627199
+started,bundle,org.eclipse.ltk.ui.refactoring,3.4.100.v20090604,"org.eclipse.ltk.ui.refactoring",1350215627203
+started,bundle,org.eclipse.compare,3.5.0.I20090514-0808,"org.eclipse.compare",1350215627422
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215632269
+started,bundle,org.eclipse.jdt.apt.core,3.3.201.R35x_v20090818-0235,"org.eclipse.jdt.apt.core",1350215662809

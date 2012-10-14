@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.jdt.apt.pluggable.core,1.0.201.R35x_v20090818-0225,"org.eclipse.jdt.apt.pluggable.core",1350215662839
+started,bundle,org.eclipse.wst.validation.ui,1.2.104.v200904232035,"org.eclipse.wst.validation.ui",1350215674496
+started,bundle,org.eclipse.wst.wsi.ui,1.0.500.v200901141851,"org.eclipse.wst.wsi.ui",1350215674619
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215683554
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.properties",1350215683619
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215697330
+error,log,,,"Unhandled event loop exception",1350215707980
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jface"".",1350215729638
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jface"".",1350215739870
+started,bundle,org.eclipse.mylyn.wikitext.ui,1.1.2.v20090912-0400-e3x,"org.eclipse.mylyn.wikitext.ui",1350215805128
+started,bundle,org.eclipse.mylyn.wikitext.core,1.1.2.v20090912-0400-e3x,"org.eclipse.mylyn.wikitext.core",1350215805150
+started,bundle,org.eclipse.wst.sse.ui,1.1.101.v200908261807,"org.eclipse.wst.sse.ui",1350215806783
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215835781
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215846636
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215851423
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215865031
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215882353
+started,bundle,org.eclipse.compare.core,3.5.0.I20090430-0408,"org.eclipse.compare.core",1350215883059
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350215883091
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350215883236
+started,bundle,org.eclipse.core.variables,3.2.200.v20090521,"org.eclipse.core.variables",1350215883656
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1350215898468
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215907123
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350215914448
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350215914577

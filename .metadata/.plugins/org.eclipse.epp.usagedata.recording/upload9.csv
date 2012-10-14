@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216144145
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1350216265069
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216265108
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350216265897
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1350216272054
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350216272134
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216336181
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216351798
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216372377
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216372464
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216372625
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216376987
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1350216380930
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350216388339
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1350216398418
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216405709
+started,bundle,org.eclipse.wst.common.environment,1.0.301.v200908101600,"org.eclipse.wst.common.environment",1350216413957
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216418511
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.import",1350216418545
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.import",1350216418546
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jface"".",1350216424567
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216424767
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216428742
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.properties",1350216428769
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216436165

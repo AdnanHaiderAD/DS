@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jface"".",1350216454837
+no handler,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.copy",1350216468310
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216478838
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216485143
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216490270
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216499397
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216511054
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216514525
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216532445
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216538107
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216560289
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216563644
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216583288
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350216587659
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216598562
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216640324
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216649933
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.navigate.backwardHistory",1350216683174
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216743246
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216748944
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216749022
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216749078
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216753553
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216757288
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350216803194
