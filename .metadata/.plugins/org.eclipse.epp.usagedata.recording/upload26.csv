@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.specification.name,sysinfo,,,"Java Platform API Specification",1350299868326
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1350299868326
+java.specification.version,sysinfo,,,"1.6",1350299868326
+java.vendor,sysinfo,,,"Apple Inc.",1350299868326
+java.version,sysinfo,,,"1.6.0_22",1350299868326
+java.vm.info,sysinfo,,,"mixed mode",1350299868326
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1350299868326
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1350299868326
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1350299868326
+java.vm.specification.version,sysinfo,,,"1.0",1350299868326
+java.vm.vendor,sysinfo,,,"Apple Inc.",1350299868326
+java.vm.version,sysinfo,,,"17.1-b03-307",1350299868326
+started,bundle,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui",1350301514591
+started,bundle,org.eclipse.wst.server.core,1.1.102.v20090825,"org.eclipse.wst.server.core",1350301514817
+started,bundle,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.ui",1350301514852
+started,bundle,org.eclipse.jdt.debug,3.5.0.v20090526,"org.eclipse.jdt.debug",1350301514953
+started,bundle,org.eclipse.jdt.debug.ui,3.4.1.v20090811_r351,"org.eclipse.jdt.debug.ui",1350301515152
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350301517502
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350301534821
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350301558892
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350301565383
+started,bundle,org.eclipse.mylyn.java.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.java.ui",1350301589037
+started,bundle,org.eclipse.pde.api.tools,1.0.101.v20090714,"org.eclipse.pde.api.tools",1350301589136
+started,bundle,org.eclipse.pde.api.tools.ui,1.0.101.v20090820,"org.eclipse.pde.api.tools.ui",1350301589138
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.copy",1350301899433
