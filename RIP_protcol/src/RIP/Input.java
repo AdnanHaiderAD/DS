@@ -13,12 +13,14 @@ import javax.swing.JFileChooser;
 
 public class Input {
 static Hashtable<String,InputNode>  lookupTable = new Hashtable<String,InputNode>();
-	
+static JFileChooser openfile;
 	public static void main(String[] args){
-		JFileChooser openfile = new JFileChooser();
-		int reval =openfile.showOpenDialog(null);
+		 openfile= new JFileChooser();
+		 int reval =openfile.showOpenDialog(null);
+		 
 			if (reval== JFileChooser.APPROVE_OPTION){
 				 File input =openfile.getSelectedFile();
+				
 				 	if (input.isDirectory()){
 				 		System.out.println("the specified file is a directory :the file must be a text file!");
 				 		}
@@ -29,20 +31,23 @@ static Hashtable<String,InputNode>  lookupTable = new Hashtable<String,InputNode
 							 		if (!line.isEmpty()){
 							 		      String[] commands=line.split(" ");
 							 		      			if (commands[0].equals((String)"node")){
-							 		      				int[] addresses = new int[commands.length-2];
-							 		      				for (int i=2;i<=commands.length-2;i++){
+							 		      					int[] addresses = new int[commands.length-2];
+							 		      					for (int i=2;i<commands.length;i++){
 							 		      						addresses[i-2]= Integer.parseInt(  commands[i]);	
 							 		      					}
 							 		      				lookupTable.put(commands[1], new InputNode(commands[1],addresses));
 							 		    	   
 							 		       			}else if (commands[0].equals((String)"link")){
-							 		       			   ((InputNode)lookupTable.get(commands[1])).addEntries((InputNode)lookupTable.get(commands[2]));
-							 		       			((InputNode)lookupTable.get(commands[2])).addEntries((InputNode)lookupTable.get(commands[1]));
+							 		       					if( !lookupTable.containsKey(commands[1]) || !lookupTable.containsKey(commands[2]) ){
+							 		       						System.out.println("Define these nodes first before specifying the link");
+							 		       					}else{
+							 		       						((InputNode)lookupTable.get(commands[1])).addEntries((InputNode)lookupTable.get(commands[2]));
+							 		       						((InputNode)lookupTable.get(commands[2])).addEntries((InputNode)lookupTable.get(commands[1]));
+							 		       					}
 							 		       			}else{
-							 		       			 ArrayList<String> links = lookupTable.get(commands[1]).links;
-							 		       			 		for (String link:links){
-							 		       			 			lookupTable.get(link).receiveTable(lookupTable.get(commands[1]).getRoutingTable(), commands[1]);
-							 		       			 		}
+							 		       					if (commands.length==2){
+							 		       						InputCommand.sendProcess(commands[1]);
+							 		       					}
 									 		    	   
 							 		       			}
 							 		    }

@@ -1,0 +1,118 @@
+package RIP;
+
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+public class InputNode implements Runnable {
+
+	private String name;
+	private int[] addresses;
+	private boolean tableUpdated=false;
+	InputNode sender;
+	/*the routing table of the corresponding node */
+	private Hashtable<Integer,LinkCost> routingTable = null;
+	/* list of the nodes that are linked to the current node*/
+	ArrayList<String> links= new ArrayList<String>();
+	
+	public InputNode(String name ,int[] addresses){
+		this.name=name;
+		this.addresses=addresses;
+		routingTable= new Hashtable<Integer,LinkCost>();
+		 for (int i =0; i<addresses.length;i++){
+			 routingTable.put(addresses[i], new LinkCost("local",0));
+		 }
+	}
+	
+	public void addEntries(InputNode node){
+		int[] destinations = node.getAddresses();
+		links.add(node.getName());
+			for (int i=0;i<destinations.length;i++){
+				routingTable.put(destinations[i], new LinkCost(node.getName(),1));
+			}
+		
+		}
+	public void settableUpdate(boolean state){
+		tableUpdated = state;
+	}
+	public boolean gettableUpdate(){
+		return tableUpdated;
+	}
+	public Hashtable<Integer, LinkCost> getRoutingTable(){
+		return routingTable;
+	}
+	public void receiveMsgFrom(InputNode sender){
+		this.sender=sender;
+	}
+	public void receiveTable(){
+		Hashtable<Integer ,LinkCost> table = sender.getRoutingTable();
+		String name = sender.getName();
+		String info="";
+		Enumeration<Integer> e= table.keys();
+		while (e.hasMoreElements()){
+			Integer address= (Integer) e.nextElement();
+			info = info.concat(" ( "+address+ "|" + table.get(address).link +"|"+ table.get(address).Cost + ") ");
+		}
+		System.out.println(" recieve "+ name + " "+ this.getName() + info);
+		
+		/*RIP routing protocol */
+		for (Enumeration<Integer> list= table.keys(); list.hasMoreElements();){
+			Integer address= list.nextElement();
+			LinkCost row = table.get(address);
+			 if (row.link.equals("name")){
+				 row.Cost= row.Cost+1;
+				 row.link= "name";
+				  if (!routingTable.containsKey(address)){
+					  routingTable.put(address, row);
+					  settableUpdate(true);
+					  
+				  }else{
+					  		for (Enumeration<Integer> local_list = routingTable.keys(); local_list.hasMoreElements();){
+						         Integer destination = local_list.nextElement();
+						    	 LinkCost destEntry= routingTable.get(destination);
+						    	 if (destination==address ){
+						    		 if (row.Cost< destEntry.Cost|| row.link.equals(destEntry.link)){
+						    			 destEntry= row;
+						    			  settableUpdate(true);
+						    		 }
+						    	 }
+					  			}
+					  }
+				
+			 }
+		}
+		
+		
+	}
+	
+	public String getName(){
+		return name;
+		
+	}
+	public int[] getAddresses(){
+		return addresses;
+	}
+	
+	public static class LinkCost{
+		String link;
+		int Cost;
+		public LinkCost(String link,int cost){
+		   this.link=link;
+		   this.Cost=cost;
+		}
+	}
+
+	@Override
+	public void run() {
+		receiveTable();
+		if (tableUpdated){
+			Sytem.out.println("this has been reached");
+			InputCommand.sendProcess(getName());
+			settableUpdate(false);
+		}
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+

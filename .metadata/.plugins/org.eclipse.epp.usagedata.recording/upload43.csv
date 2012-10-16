@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1350380249559
+java.specification.version,sysinfo,,,"1.6",1350380249559
+java.vendor,sysinfo,,,"Apple Inc.",1350380249559
+java.version,sysinfo,,,"1.6.0_22",1350380249559
+java.vm.info,sysinfo,,,"mixed mode",1350380249559
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1350380249559
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1350380249559
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1350380249559
+java.vm.specification.version,sysinfo,,,"1.0",1350380249559
+java.vm.vendor,sysinfo,,,"Apple Inc.",1350380249559
+java.vm.version,sysinfo,,,"17.1-b03-307",1350380249559
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350380261262
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350380261339
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350380267157
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350380267256
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350380269389
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350380273730
+started,bundle,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit",1350380658917
+started,bundle,org.eclipse.mylyn.java.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.java.ui",1350380687887
+started,bundle,org.eclipse.pde.api.tools,1.0.101.v20090714,"org.eclipse.pde.api.tools",1350380687964
+started,bundle,org.eclipse.pde.api.tools.ui,1.0.101.v20090820,"org.eclipse.pde.api.tools.ui",1350380687970
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350380791571
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350381482104
+opened,view,org.eclipse.ui.ide,3.5.1.M20090826-0800,"org.eclipse.ui.views.ProblemView",1350381484690
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350381573852
