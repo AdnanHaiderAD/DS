@@ -9,7 +9,7 @@ public class InputCommand {
 	public static void sendProcess(String sender) {
 	ArrayList<String> receivers = Input.lookupTable.get(sender).links;	
 	ArrayList<Thread> ConcurrentE = new ArrayList<Thread>();
-	InputNode copyOfsender = new InputNode(sender,Input.lookupTable.get(sender).getAddresses());
+	InputNode copyOfsender = new InputNode(sender,Input.lookupTable.get(sender).getAddresses())
 	for (String receiver:receivers){
 	Input.lookupTable.get(receiver).receiveMsgFrom(copyOfsender);
 	System.out.println("send "+sender +" " + receiver);
