@@ -60,8 +60,10 @@ public class InputNode implements Runnable {
 		    Integer address= list.nextElement();
 			LinkCost row = table.get(address);
 			 if (!row.link.equals(name)){
+				 if (row.link.equals("local")){
+					 row.Cost= row.Cost+1;
+				 }
 				
-				 row.Cost= row.Cost+1;
 				 row.link= name;
 				 
 				  if (!routingTable.containsKey(address)){

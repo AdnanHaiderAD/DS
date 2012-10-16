@@ -57,13 +57,11 @@ public class InputNode implements Runnable {
 		
 		/*RIP routing protocol */
 		for (Enumeration<Integer> list= table.keys(); list.hasMoreElements();){
-		    Integer address= list.nextElement();
+			Integer address= list.nextElement();
 			LinkCost row = table.get(address);
 			 if (!row.link.equals(name)){
-				
 				 row.Cost= row.Cost+1;
 				 row.link= name;
-				 
 				  if (!routingTable.containsKey(address)){
 					  routingTable.put(address, row);
 					  settableUpdate(true);
@@ -83,7 +81,6 @@ public class InputNode implements Runnable {
 				
 			 }
 		}
-		
 		System.out.println(getName()+ "has been updated:"+ gettableUpdate());
 		
 		
@@ -110,16 +107,11 @@ public class InputNode implements Runnable {
 	public void run() {
 		settableUpdate(false);
 		receiveTable();
-		sender=null;
 		if (gettableUpdate()){
 			System.out.println("this has been reached"+ name);
 			InputCommand.sendProcess(getName());
 			
-		
-		}else{
-			System.out.println(getName() + "is finished");
 		}
-		
 		// TODO Auto-generated method stub
 		
 	}

@@ -57,10 +57,9 @@ public class InputNode implements Runnable {
 		
 		/*RIP routing protocol */
 		for (Enumeration<Integer> list= table.keys(); list.hasMoreElements();){
-		    Integer address= list.nextElement();
+			Integer address= list.nextElement();
 			LinkCost row = table.get(address);
-			 if (!row.link.equals(name)){
-				
+			 if (!row.link.equals("local")){
 				 row.Cost= row.Cost+1;
 				 row.link= name;
 				 
@@ -115,11 +114,7 @@ public class InputNode implements Runnable {
 			System.out.println("this has been reached"+ name);
 			InputCommand.sendProcess(getName());
 			
-		
-		}else{
-			System.out.println(getName() + "is finished");
 		}
-		
 		// TODO Auto-generated method stub
 		
 	}
