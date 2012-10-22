@@ -46,6 +46,7 @@ static JFileChooser openfile;
 							 		       					}
 							 		       			}else{
 							 		       					if (commands.length==2){
+							 		       						
 							 		       						InputCommand.sendProcess(commands[1]);
 							 		       					}
 									 		    	   

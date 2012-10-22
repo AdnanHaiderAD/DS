@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.specification.version,sysinfo,,,"1.6",1350921669631
+java.vendor,sysinfo,,,"Apple Inc.",1350921669631
+java.version,sysinfo,,,"1.6.0_22",1350921669631
+java.vm.info,sysinfo,,,"mixed mode",1350921669631
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1350921669631
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1350921669631
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1350921669631
+java.vm.specification.version,sysinfo,,,"1.0",1350921669631
+java.vm.vendor,sysinfo,,,"Apple Inc.",1350921669631
+java.vm.version,sysinfo,,,"17.1-b03-307",1350921669631
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350921674111
+started,bundle,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit",1350921674149
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350921676211
+started,bundle,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui",1350921677490
+started,bundle,org.eclipse.wst.server.core,1.1.102.v20090825,"org.eclipse.wst.server.core",1350921677556
+started,bundle,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.ui",1350921677570
+started,bundle,org.eclipse.jdt.debug,3.5.0.v20090526,"org.eclipse.jdt.debug",1350921677615
+started,bundle,org.eclipse.jdt.debug.ui,3.4.1.v20090811_r351,"org.eclipse.jdt.debug.ui",1350921677648
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350921678519
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350921680203
+opened,view,org.eclipse.ui.ide,3.5.1.M20090826-0800,"org.eclipse.ui.views.AllMarkersView",1350921682254
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1350921689787
+started,bundle,org.eclipse.wst.xsl.debug.ui,1.0.0.v200904240436,"org.eclipse.wst.xsl.debug.ui",1350921691585
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350921692939
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350921708321

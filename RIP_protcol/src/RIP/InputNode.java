@@ -4,17 +4,18 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-public class InputNode implements Runnable, Cloneable {
+public class InputNode implements Runnable{
 
 	private String name;
 	private int[] addresses;
 	private boolean tableUpdated=false;
 	String sender;
+	
 	Hashtable<Integer,LinkCost> sendertable=null;
 	/*the routing table of the corresponding node */
-	private Hashtable<Integer,LinkCost> routingTable = null;
+	private  Hashtable<Integer,LinkCost> routingTable = null;
 	/* list of the nodes that are linked to the current node*/
-	ArrayList<String> links= new ArrayList<String>();
+	ArrayList<String> links= null;
 	
 	public InputNode(String name ,int[] addresses){
 		this.name=name;
@@ -23,11 +24,12 @@ public class InputNode implements Runnable, Cloneable {
 		 for (int i =0; i<addresses.length;i++){
 			 routingTable.put(addresses[i], new LinkCost("local",0));
 		 }
+		 links=new ArrayList<String>();
 	}
 	
 	public void addEntries(InputNode node){
 		int[] destinations = node.getAddresses();
-		if (!links.contains(node.getName())){
+		if (!links.contains(node.getName()) && !node.getName().equals(getName())){
 		links.add(node.getName());
 		}
 			for (int i=0;i<destinations.length;i++){
@@ -48,8 +50,8 @@ public class InputNode implements Runnable, Cloneable {
 		Hashtable<Integer,LinkCost> sendingTable = new Hashtable<Integer,LinkCost>(routingTable.size());
 		for (Enumeration<Integer> e = routingTable.keys(); e.hasMoreElements();){
 			 Integer key = e.nextElement();
-			 sendingTable.put(key, routingTable.get(key));
-	}
+			 sendingTable.put(key, new LinkCost(routingTable.get(key)));
+			}
 		return sendingTable;
 	}
 	public void receiveMsgFrom(String sender, Hashtable<Integer,LinkCost>senderTable){
@@ -57,22 +59,14 @@ public class InputNode implements Runnable, Cloneable {
 		this.sendertable=new Hashtable<Integer,LinkCost>(senderTable);
 	}
 	public void receiveTable(){
-		
-		String info="";
-		Enumeration<Integer> e= sendertable.keys();
-		while (e.hasMoreElements()){
-			Integer address= (Integer) e.nextElement();
-			info = info.concat(" ( "+address+ "|" + sendertable.get(address).link +"|"+ sendertable.get(address).Cost + ") ");
-		}
-		System.out.println(" recieve "+ sender + " "+ this.getName() + info);
-		
-		/*RIP routing protocol */
+		settableUpdate(false);
+		/*RIP protocol */
 		for (Enumeration<Integer> list= sendertable.keys(); list.hasMoreElements();){
 		    Integer address= list.nextElement();
 			LinkCost row = sendertable.get(address);
 			 if (!row.link.equals(sender)){
 				
-				 row.Cost= row.Cost+1;
+				 row.cost= row.cost+1;
 				 row.link= sender;
 				 
 				  if (!routingTable.containsKey(address)){
@@ -84,8 +78,8 @@ public class InputNode implements Runnable, Cloneable {
 						         Integer destination = local_list.nextElement();
 						    	 LinkCost destEntry= routingTable.get(destination);
 						    	 if (destination==address ){
-						    		 if (row.Cost< destEntry.Cost|| row.link.equals(destEntry.link)){
-						    			  destEntry= row;
+						    		 if (row.cost< destEntry.cost|| row.link.equals(destEntry.link)){
+						    			  destEntry= new LinkCost( row);
 						    			  settableUpdate(true);
 						    		 }
 						    	 }
@@ -108,57 +102,65 @@ public class InputNode implements Runnable, Cloneable {
 		return addresses;
 	}
 	
-	public static class LinkCost{
+	public  class LinkCost{
 		String link;
-		int Cost;
+		int cost;
 		public LinkCost(String link,int cost){
 		   this.link=link;
-		   this.Cost=cost;
+		   this.cost=cost;
+		}
+		
+		public LinkCost(LinkCost lc)
+		{
+			this.link=lc.link;
+			this.cost= lc.cost;
 		}
 	}
 
 	@Override
 	public void run() {
-		settableUpdate(false);
-		receiveTable();
+		System.out.println("send "+sender +" " + getName());
 		
-		Enumeration<Integer> e= routingTable.keys();
-		String info= this.getName();
-		System.out.println(getName()+ "has been updated:"+ gettableUpdate());
+		String info="";
+		Enumeration<Integer> e= sendertable.keys();
+		/* the node acknowledges receive of data */
 		while (e.hasMoreElements()){
 			Integer address= (Integer) e.nextElement();
-			info = info.concat(" ( "+address+ "|" + routingTable.get(address).link +"|"+ routingTable.get(address).Cost + ") ");
+			info = info.concat(" ( "+address+ "|" + sendertable.get(address).link +"|"+ sendertable.get(address).cost + ") ");
 		}
-		System.out.println(info);
+		System.out.println(" receive "+ sender + " "+ getName() + info);
 		
-		sender=null;
-		if (gettableUpdate()){
-			System.out.println("this has been reached"+ name);
+		//Rip protocol
+		receiveTable();
+		if (!gettableUpdate()){
+			Thread.currentThread().stop();
+		}
+		else{
+		
+		/* print the table */
+		Enumeration<Integer> e2= routingTable.keys();
+		String inform= this.getName();
+		System.out.println(getName()+ "has been updated:"+ gettableUpdate());
+		while (e2.hasMoreElements()){
+			Integer address= (Integer) e2.nextElement();
+			inform = inform.concat(" ( "+address+ "|" + routingTable.get(address).link +"|"+ routingTable.get(address).cost + ") ");
+		}
+		System.out.println(inform);
+		
+		
+		
+			settableUpdate(false);
+			
+			
 			InputCommand.sendProcess(getName());
 			
-		
-		}else{
-			System.out.println(getName() + "is finished");
 		}
 		
 		// TODO Auto-generated method stub
 		
 	}
 	
-	public InputNode clone(){
-		InputNode node1=null;
-		try {
-		    node1= (InputNode)super.clone();
-		    node1.routingTable= (Hashtable<Integer, LinkCost>) this.getRoutingTable().clone();
-		   
-		    
-		    
-			
-		} catch (CloneNotSupportedException e) {
-			// TODO Auto-generated catch block
-				}
-		return node1;
-	}
+	
 	
 }
 
