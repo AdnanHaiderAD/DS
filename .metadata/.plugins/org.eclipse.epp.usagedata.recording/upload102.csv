@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350848990715
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350848994336
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849023274
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849034248
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849133291
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849135248
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849135673
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1350849146436
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849151333
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849155696
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849168522
+error,log,,,"Unhandled event loop exception",1350849183117
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849280794
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849280820
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849304125
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849317397
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849340687
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849344169
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849357410
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849357476
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849361854
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849364283
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1350849393643
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849400865
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1350849402816
