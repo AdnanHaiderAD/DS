@@ -3,6 +3,7 @@ package RIP;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Scanner;
 
@@ -37,7 +38,7 @@ static JFileChooser openfile;
 							 		      					}
 							 		      				lookupTable.put(commands[1], new InputNode(commands[1],addresses));
 							 		    	   
-							 		       			}else if (commands[0].equals((String)"link")){
+							 		       			}else if (commands[0].equals("link")){
 							 		       					if( !lookupTable.containsKey(commands[1]) || !lookupTable.containsKey(commands[2]) ){
 							 		       						System.out.println("Define these nodes first before specifying the link");
 							 		       					}else{
@@ -45,6 +46,18 @@ static JFileChooser openfile;
 							 		       						((InputNode)lookupTable.get(commands[2])).addEntries((InputNode)lookupTable.get(commands[1]));
 							 		       					}
 							 		       			}else{
+							 		       				
+							 		       				 for (Enumeration<String> e= lookupTable.keys(); e.hasMoreElements();){
+							 		       					 String process = e.nextElement();
+							 		       					 System.out.println(" The process is"+process);
+							 		       					 ArrayList<String> links = lookupTable.get(process).links;
+							 		       					 String link =" ";
+							 		       					 for (String l:links){
+							 		       						 link= link + l+ " ";
+							 		       					 }
+							 		       					 System.out.println("The links are "+link);
+							 		       					 
+							 		       				 }
 							 		       					if (commands.length==2){
 							 		       						
 							 		       						InputCommand.sendProcess(commands[1]);

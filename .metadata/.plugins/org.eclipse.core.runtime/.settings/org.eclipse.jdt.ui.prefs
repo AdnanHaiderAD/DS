@@ -1,9 +1,10 @@
-#Sun Oct 14 13:56:22 BST 2012
+#Tue Oct 23 22:55:55 BST 2012
 sourceHoverBackgroundColor=255,255,225
 content_assist_proposals_foreground=0,0,0
 org.eclipse.jdt.ui.overrideannotation=true
 spelling_locale_initialized=true
 content_assist_disabled_computers=org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000
+markOccurrences=false
 org.eclipse.jdt.ui.gettersetter.use.is=true
 org.eclipse.jdt.ui.text.templates_migrated=true
 useAnnotationsPrefPage=true

@@ -3,15 +3,16 @@ package RIP;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.LinkedList;
 
 public class InputNode implements Runnable{
 
 	private String name;
 	private int[] addresses;
 	private boolean tableUpdated=false;
-	String sender;
+	LinkedList<String> Senders= new LinkedList<String>();
 	
-	Hashtable<Integer,LinkCost> sendertable=null;
+	LinkedList<Hashtable<Integer,LinkCost>> senderQue=new LinkedList<Hashtable<Integer,LinkCost>>();
 	/*the routing table of the corresponding node */
 	private  Hashtable<Integer,LinkCost> routingTable = null;
 	/* list of the nodes that are linked to the current node*/
@@ -55,15 +56,29 @@ public class InputNode implements Runnable{
 		return sendingTable;
 	}
 	public void receiveMsgFrom(String sender, Hashtable<Integer,LinkCost>senderTable){
-		this.sender=sender;
-		this.sendertable=new Hashtable<Integer,LinkCost>(senderTable);
+		Senders.add(sender);
+		this.senderQue.add(senderTable);
 	}
-	public void receiveTable(){
+	public  synchronized void receiveTable(){
 		settableUpdate(false);
+		Hashtable<Integer,LinkCost>senderTable = senderQue.remove();
+		String sender= Senders.remove();
+		
+		System.out.println("send "+sender +" " + getName());
+		String info="";
+		Enumeration<Integer> e= senderTable.keys();
+		/* the node acknowledges receive of data */
+		while (e.hasMoreElements()){
+			Integer address= (Integer) e.nextElement();
+			info = info.concat(" ( "+address+ "|" + senderTable.get(address).link +"|"+ senderTable.get(address).cost + ") ");
+		}
+		System.out.println(" receive "+ sender + " "+ getName() + info);
+		
+		
 		/*RIP protocol */
-		for (Enumeration<Integer> list= sendertable.keys(); list.hasMoreElements();){
+		for (Enumeration<Integer> list= senderTable.keys(); list.hasMoreElements();){
 		    Integer address= list.nextElement();
-			LinkCost row = sendertable.get(address);
+			LinkCost row = senderTable.get(address);
 			 if (!row.link.equals(sender)){
 				
 				 row.cost= row.cost+1;
@@ -78,7 +93,7 @@ public class InputNode implements Runnable{
 						         Integer destination = local_list.nextElement();
 						    	 LinkCost destEntry= routingTable.get(destination);
 						    	 if (destination==address ){
-						    		 if (row.cost< destEntry.cost|| row.link.equals(destEntry.link)){
+						    		 if (row.cost< destEntry.cost|| (row.link.equals(destEntry.link) && row.cost!=destEntry.cost)){
 						    			  destEntry= new LinkCost( row);
 						    			  settableUpdate(true);
 						    		 }
@@ -88,6 +103,21 @@ public class InputNode implements Runnable{
 				
 			 }
 		}
+		
+			if (gettableUpdate()){
+			
+		/* print the table */
+				Enumeration<Integer> e2= routingTable.keys();
+				String inform= this.getName();
+				System.out.println(getName()+ "has been updated:"+ gettableUpdate());
+				
+				while (e2.hasMoreElements()){
+						Integer address= (Integer) e2.nextElement();
+						inform = inform.concat(" ( "+address+ "|" + routingTable.get(address).link +"|"+ routingTable.get(address).cost + ") ");
+				}
+				System.out.println(inform);
+			}
+		
 		
 		
 		
@@ -119,42 +149,20 @@ public class InputNode implements Runnable{
 
 	@Override
 	public void run() {
-		System.out.println("send "+sender +" " + getName());
 		
-		String info="";
-		Enumeration<Integer> e= sendertable.keys();
-		/* the node acknowledges receive of data */
-		while (e.hasMoreElements()){
-			Integer address= (Integer) e.nextElement();
-			info = info.concat(" ( "+address+ "|" + sendertable.get(address).link +"|"+ sendertable.get(address).cost + ") ");
-		}
-		System.out.println(" receive "+ sender + " "+ getName() + info);
-		
+		 		
 		//Rip protocol
+		while(!senderQue.isEmpty()){
 		receiveTable();
-		if (!gettableUpdate()){
-			Thread.currentThread().stop();
+		
 		}
-		else{
-		
-		/* print the table */
-		Enumeration<Integer> e2= routingTable.keys();
-		String inform= this.getName();
-		System.out.println(getName()+ "has been updated:"+ gettableUpdate());
-		while (e2.hasMoreElements()){
-			Integer address= (Integer) e2.nextElement();
-			inform = inform.concat(" ( "+address+ "|" + routingTable.get(address).link +"|"+ routingTable.get(address).cost + ") ");
+		if (gettableUpdate()){
+		settableUpdate(false);	
+		InputCommand.sendProcess(this.name);
 		}
-		System.out.println(inform);
 		
-		
-		
-			settableUpdate(false);
-			
-			
-			InputCommand.sendProcess(getName());
-			
 		}
+		
 		
 		// TODO Auto-generated method stub
 		
@@ -162,5 +170,5 @@ public class InputNode implements Runnable{
 	
 	
 	
-}
+
 
