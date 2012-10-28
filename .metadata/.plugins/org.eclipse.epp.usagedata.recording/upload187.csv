@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1351452814790
+java.specification.version,sysinfo,,,"1.6",1351452814790
+java.vendor,sysinfo,,,"Apple Inc.",1351452814790
+java.version,sysinfo,,,"1.6.0_22",1351452814790
+java.vm.info,sysinfo,,,"mixed mode",1351452814790
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1351452814790
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1351452814790
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1351452814790
+java.vm.specification.version,sysinfo,,,"1.0",1351452814790
+java.vm.vendor,sysinfo,,,"Apple Inc.",1351452814790
+java.vm.version,sysinfo,,,"17.1-b03-307",1351452814790
+started,bundle,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui",1351452818702
+started,bundle,org.eclipse.wst.server.core,1.1.102.v20090825,"org.eclipse.wst.server.core",1351452818769
+started,bundle,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.ui",1351452818782
+started,bundle,org.eclipse.jdt.debug,3.5.0.v20090526,"org.eclipse.jdt.debug",1351452818816
+started,bundle,org.eclipse.jdt.debug.ui,3.4.1.v20090811_r351,"org.eclipse.jdt.debug.ui",1351452818861
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1351452819488
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1351452831852
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1351452834739
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1351453455173
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1351453642780
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1351453648995
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1351453650235
+started,bundle,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.ui.views.log",1351453728422
+started,bundle,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui",1351453728425

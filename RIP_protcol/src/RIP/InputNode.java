@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class InputNode implements Runnable{
 
@@ -61,6 +62,7 @@ public class InputNode implements Runnable{
 	}
 	public  synchronized void receiveTable(){
 		settableUpdate(false);
+		
 		Hashtable<Integer,LinkCost>senderTable = senderQue.remove();
 		String sender= Senders.remove();
 		
@@ -94,7 +96,9 @@ public class InputNode implements Runnable{
 						    	 LinkCost destEntry= routingTable.get(destination);
 						    	 if (destination==address ){
 						    		 if (row.cost< destEntry.cost|| (row.link.equals(destEntry.link) && row.cost!=destEntry.cost)){
-						    			  destEntry= new LinkCost( row);
+						    			 routingTable.remove(destination);
+						    			 routingTable.put(destination , new LinkCost(row));
+						    			 
 						    			  settableUpdate(true);
 						    		 }
 						    	 }
@@ -116,6 +120,8 @@ public class InputNode implements Runnable{
 						inform = inform.concat(" ( "+address+ "|" + routingTable.get(address).link +"|"+ routingTable.get(address).cost + ") ");
 				}
 				System.out.println(inform);
+			}else{
+				System.out.println(getName()+ "has been updated:"+ gettableUpdate());
 			}
 		
 		
@@ -152,15 +158,18 @@ public class InputNode implements Runnable{
 		
 		 		
 		//Rip protocol
-		while(!senderQue.isEmpty()){
+		
+		System.out.println(this.name+"s size of the list is " +senderQue.size());
 		receiveTable();
 		
-		}
+		
 		if (gettableUpdate()){
 		settableUpdate(false);	
 		InputCommand.sendProcess(this.name);
+		Input.thread_fin+=1;
+		}else{
+		Input.thread_fin+=1;
 		}
-		
 		}
 		
 		
