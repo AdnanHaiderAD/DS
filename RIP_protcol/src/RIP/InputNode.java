@@ -62,6 +62,10 @@ public class InputNode implements Runnable{
 	}
 	public  synchronized void receiveTable(){
 		settableUpdate(false);
+		if (senderQue.size()==0){
+			return;
+		}
+		
 		
 		Hashtable<Integer,LinkCost>senderTable = senderQue.remove();
 		String sender= Senders.remove();
@@ -72,7 +76,12 @@ public class InputNode implements Runnable{
 		/* the node acknowledges receive of data */
 		while (e.hasMoreElements()){
 			Integer address= (Integer) e.nextElement();
-			info = info.concat(" ( "+address+ "|" + senderTable.get(address).link +"|"+ senderTable.get(address).cost + ") ");
+		    LinkCost linkcost = senderTable.get(address);
+		    if (linkcost.link.equals("no-link")){
+		    	info = info.concat(" ( "+address+ "|" + linkcost.link +"|"+   " i) ");
+		    }else{
+		    	info = info.concat(" ( "+address+ "|" + linkcost.link +"|"+ linkcost.cost + ") ");	
+		    }
 		}
 		System.out.println(" receive "+ sender + " "+ getName() + info);
 		
@@ -83,7 +92,10 @@ public class InputNode implements Runnable{
 			LinkCost row = senderTable.get(address);
 			 if (!row.link.equals(sender)){
 				
+				 if (row.cost !=Integer.MAX_VALUE){
 				 row.cost= row.cost+1;
+				 }
+				/// String linkName = row.link;
 				 row.link= sender;
 				 
 				  if (!routingTable.containsKey(address)){
@@ -95,7 +107,10 @@ public class InputNode implements Runnable{
 						         Integer destination = local_list.nextElement();
 						    	 LinkCost destEntry= routingTable.get(destination);
 						    	 if (destination==address ){
-						    		 if (row.cost< destEntry.cost|| (row.link.equals(destEntry.link) && row.cost!=destEntry.cost)){
+						    		// if (this.name.equals(linkName) && destEntry.link.equals("no-link")|| ((destEntry.link.equals(linkName) && destEntry.cost==Integer.MAX_VALUE))){
+						    		//	 continue;
+						    		 //}
+						    		  if (row.cost< destEntry.cost|| (row.link.equals(destEntry.link) && row.cost!=destEntry.cost)){
 						    			 routingTable.remove(destination);
 						    			 routingTable.put(destination , new LinkCost(row));
 						    			 
@@ -124,10 +139,27 @@ public class InputNode implements Runnable{
 				System.out.println(getName()+ "has been updated:"+ gettableUpdate());
 			}
 		
-		
-		
-		
-		
+	}
+	
+	public synchronized void  linkFail(String process){
+		System.out.println("link-fail"+ this.name +" "+ process);
+		for (Enumeration<Integer> e =this.routingTable.keys(); e.hasMoreElements();){
+			Integer address = e.nextElement();
+			if (this.routingTable.get(address).link.equals(process)){
+				this.routingTable.get(address).link = "no-link";
+				this.routingTable.get(address).cost= Integer.MAX_VALUE;
+			}
+		}
+		this.links.remove(process);
+		if (this.Senders.contains(process)){
+			int index = this.Senders.indexOf(process);
+			Senders.remove(index);
+			senderQue.remove(index);
+		}
+		if (!links.isEmpty()){
+			
+		InputCommand.sendProcess(this.name);
+		}
 	}
 	
 	public String getName(){
@@ -156,9 +188,9 @@ public class InputNode implements Runnable{
 	@Override
 	public void run() {
 		
-		 		
+			
 		//Rip protocol
-		
+	
 		System.out.println(this.name+"s size of the list is " +senderQue.size());
 		receiveTable();
 		
@@ -171,8 +203,8 @@ public class InputNode implements Runnable{
 		Input.thread_fin+=1;
 		}
 		}
-		
-		
+
+	
 		// TODO Auto-generated method stub
 		
 	}

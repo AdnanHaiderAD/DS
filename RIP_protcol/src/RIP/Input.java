@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 import javax.swing.JFileChooser;
@@ -14,11 +15,12 @@ import RIP.InputNode.LinkCost;
 
 
 
-public class Input {
+public class Input<Y> {
 static Hashtable<String,InputNode>  lookupTable = new Hashtable<String,InputNode>();
 static JFileChooser openfile;
 static int thread_num=0;
 static int thread_fin =0;
+static LinkedList <Tuple<String,String>> linkFail = new LinkedList<Tuple<String,String>>();
 
 public static void main(String[] args){
 	 openfile= new JFileChooser();
@@ -49,10 +51,24 @@ public static void main(String[] args){
 							 		       	((InputNode)lookupTable.get(commands[1])).addEntries((InputNode)lookupTable.get(commands[2]));
 							 		       	((InputNode)lookupTable.get(commands[2])).addEntries((InputNode)lookupTable.get(commands[1]));
 							 		       	}
-							 }else{
-							     if (commands.length==2){
+							 }else  {
+								 
+								    if (commands[0].equals("send")){
 							 		InputCommand.sendProcess(commands[1]);
 							 		 }
+								    else if (commands[0].equals("link-fail")){
+								    	
+								    	
+								    	//lookupTable.get(commands[1]).linkFail(commands[2]);
+								    	//lookupTable.get(commands[2]).linkFail(commands[1]);
+								    	linkFail.add(new Tuple(commands[1], commands[2]));
+								    	
+								    }
+								    
+							    
+
+							    	
+							     
 									 		    	   
 							 	}
 				     }
@@ -60,7 +76,7 @@ public static void main(String[] args){
 				   } catch (FileNotFoundException e) {
 						// TODO Auto-generated catch block
 						System.out.println("file doesnt exist ");
-					}
+					} 
 			
  			while (thread_num!= thread_fin){
  				try {
@@ -70,7 +86,18 @@ public static void main(String[] args){
 					e.printStackTrace();
 				}
  			}
- 				printTable();
+ 			if (linkFail.size()!=0){
+ 			performLinkFailures() ;
+ 			}
+ 			while (thread_num!= thread_fin){
+ 				try {
+					Thread.currentThread().sleep(1);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+ 			}	
+ 			printTable();
 			
 			}
 			else {
@@ -84,14 +111,32 @@ public static void main(String[] args){
 		for (Enumeration <String> e = lookupTable.keys();e.hasMoreElements();){
 			String key = e.nextElement();
 			Hashtable<Integer,LinkCost> routingtable = lookupTable.get(key).getRoutingTable();
-			String table =" table "+key;
+			String tableRow =" table "+key;
 			 for (Enumeration<Integer> ad =routingtable.keys(); ad.hasMoreElements();){
 				 
 				 Integer address = ad.nextElement();
-				
-				table= table + " "+ "(" + address + " |" + routingtable.get(address).link + " |"+ routingtable.get(address).cost + " )" ; 
+				 if (routingtable.get(address).cost==Integer.MAX_VALUE){
+					 tableRow= tableRow + " "+ "(" + address + " |" + routingtable.get(address).link + " |"+  "i )" ; 
+				 }else{
+					 tableRow= tableRow + " "+ "(" + address + " |" + routingtable.get(address).link + " |"+ routingtable.get(address).cost + " )" ; 
+				 }
 			 }
-			 System.out.println(table);
+			 System.out.println(tableRow);
+		}
+	}
+	
+	public static void performLinkFailures(){
+		for (Tuple<String,String> tuple: linkFail){
+			lookupTable.get(tuple.x).linkFail(tuple.y);
+	    	lookupTable.get(tuple.y).linkFail(tuple.x);
+		}
+	}
+	public static class Tuple<X , Y >{
+		X x;
+		Y y;
+		public Tuple(X x, Y y){
+			this.x=x;
+			this.y=y;
 		}
 	}
 }

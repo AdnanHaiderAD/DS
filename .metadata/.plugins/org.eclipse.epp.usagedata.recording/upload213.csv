@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.specification.version,sysinfo,,,"1.6",1351591378705
+java.vendor,sysinfo,,,"Apple Inc.",1351591378705
+java.version,sysinfo,,,"1.6.0_22",1351591378705
+java.vm.info,sysinfo,,,"mixed mode",1351591378705
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1351591378705
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1351591378705
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1351591378705
+java.vm.specification.version,sysinfo,,,"1.0",1351591378705
+java.vm.vendor,sysinfo,,,"Apple Inc.",1351591378705
+java.vm.version,sysinfo,,,"17.1-b03-307",1351591378705
+started,bundle,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui",1351591405761
+started,bundle,org.eclipse.wst.server.core,1.1.102.v20090825,"org.eclipse.wst.server.core",1351591405831
+started,bundle,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.ui",1351591405843
+started,bundle,org.eclipse.jdt.debug,3.5.0.v20090526,"org.eclipse.jdt.debug",1351591405902
+started,bundle,org.eclipse.jdt.debug.ui,3.4.1.v20090811_r351,"org.eclipse.jdt.debug.ui",1351591405947
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1351591406543
+opened,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1351591417191
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1351591417214
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1351591418628
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1351591658393
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1351591900824
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1351591910389
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1351591911823
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1351591921568
+started,bundle,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit",1351592004550

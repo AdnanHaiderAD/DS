@@ -19,10 +19,12 @@ public class InputCommand {
 		}
 	
 	for (String receiver:receivers){
+		
 		ConcurrentE.add(new Thread(Input.lookupTable.get(receiver)));
 		}
 	
 	for (Thread update: ConcurrentE){
+		
 		update.start();
 		Input.thread_num+=1;
 		 
