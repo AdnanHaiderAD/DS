@@ -40,13 +40,13 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Input.java" partName="Input.java" path="/Users/Tanguero/Documents/MSC/Distributed Systems/DS/RIP_protcol/src/RIP/Input.java" title="Input.java" tooltip="RIP_protcol/src/RIP/Input.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Input.java" partName="Input.java" path="/Users/Tanguero/Documents/MSC/Distributed Systems/DS/RIP_protcol/src/RIP/Input.java" title="Input.java" tooltip="RIP_protcol/src/RIP/Input.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RIP_protcol/src/RIP/Input.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2602" selectionTopPixel="792"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3890" selectionTopPixel="1167"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InputNode.java" partName="InputNode.java" path="/Users/Tanguero/Documents/MSC/Distributed Systems/DS/RIP_protcol/src/RIP/InputNode.java" title="InputNode.java" tooltip="RIP_protcol/src/RIP/InputNode.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InputNode.java" partName="InputNode.java" path="/Users/Tanguero/Documents/MSC/Distributed Systems/DS/RIP_protcol/src/RIP/InputNode.java" title="InputNode.java" tooltip="RIP_protcol/src/RIP/InputNode.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RIP_protcol/src/RIP/InputNode.java"/>
-<editorState selectionHorizontalPixel="6" selectionLength="0" selectionOffset="5125" selectionTopPixel="1930"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5439" selectionTopPixel="2170"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InputCommand.java" partName="InputCommand.java" path="/Users/Tanguero/Documents/MSC/Distributed Systems/DS/RIP_protcol/src/RIP/InputCommand.java" title="InputCommand.java" tooltip="RIP_protcol/src/RIP/InputCommand.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RIP_protcol/src/RIP/InputCommand.java"/>
@@ -330,55 +330,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RIP_protcol/src/RIP/InputNode.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RIP_protcol/src/RIP/Input.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RIP_protcol/src/RIP/InputCommand.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RIP_protcol/src/RIP/Input.java"/>
 </editors>
-<item historyLabel="InputNode.java" index="0">
-<position/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position info="not_deleted" x="3493" y="0"/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position info="not_deleted" x="3491" y="0"/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position info="not_deleted" x="3493" y="0"/>
-</item>
-<item historyLabel="Input.java" index="1">
-<position info="not_deleted" x="2945" y="0"/>
-</item>
-<item historyLabel="Input.java" index="1">
-<position info="not_deleted" x="2200" y="0"/>
-</item>
-<item historyLabel="Input.java" index="1">
-<position/>
-</item>
-<item historyLabel="Input.java" index="1">
-<position info="not_deleted" x="2200" y="0"/>
-</item>
-<item historyLabel="Input.java" index="1">
-<position info="not_deleted" x="2186" y="0"/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position info="not_deleted" x="2989" y="0"/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position info="not_deleted" x="5097" y="0"/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position info="not_deleted" x="5094" y="0"/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position info="not_deleted" x="4729" y="0"/>
-</item>
-<item historyLabel="InputNode.java" index="0">
-<position info="not_deleted" x="5094" y="0"/>
-</item>
-<item historyLabel="Input.java" index="1">
-<position info="not_deleted" x="2186" y="0"/>
-</item>
 <item historyLabel="Input.java" index="1">
 <position info="not_deleted" x="1973" y="0"/>
 </item>
@@ -478,8 +431,56 @@
 <item historyLabel="InputCommand.java" index="2">
 <position info="not_deleted" x="737" y="0"/>
 </item>
-<item active="true" historyLabel="InputNode.java" index="0">
+<item historyLabel="InputNode.java" index="0">
 <position info="not_deleted" x="5125" y="0"/>
+</item>
+<item historyLabel="InputNode.java" index="0">
+<position info="not_deleted" x="3727" y="0"/>
+</item>
+<item historyLabel="InputNode.java" index="0">
+<position info="not_deleted" x="3727" y="0"/>
+</item>
+<item historyLabel="InputNode.java" index="0">
+<position/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="2794" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="4203" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="4200" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="513" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="2322" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="2325" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="2287" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="3942" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="4091" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="3072" y="0"/>
+</item>
+<item historyLabel="InputNode.java" index="0">
+<position info="not_deleted" x="5439" y="0"/>
+</item>
+<item historyLabel="Input.java" index="3">
+<position info="not_deleted" x="3072" y="0"/>
+</item>
+<item active="true" historyLabel="Input.java" index="3">
+<position info="not_deleted" x="3710" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
