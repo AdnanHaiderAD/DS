@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.wst.jsdt.manipulation,1.0.100.v200809240707,"org.eclipse.wst.jsdt.manipulation",1351900164327
+started,bundle,org.eclipse.wst.jsdt.ui,1.0.200.v200905242047,"org.eclipse.wst.jsdt.ui",1351900164327
+started,bundle,org.eclipse.wst.sse.core,1.1.401.v200909172215,"org.eclipse.wst.sse.core",1351900164349
+started,bundle,org.eclipse.wst.validation,1.2.102.v200905201610,"org.eclipse.wst.validation",1351900164371
+started,bundle,org.eclipse.wst.web,1.1.301.v200909021400,"org.eclipse.wst.web",1351900164385
+started,bundle,org.eclipse.wst.xml.core,1.1.401.v200908242115,"org.eclipse.wst.xml.core",1351900164414
+os,sysinfo,,,"macosx",1351900164418
+arch,sysinfo,,,"x86",1351900164418
+ws,sysinfo,,,"cocoa",1351900164418
+locale,sysinfo,,,"en_US",1351900164418
+processors,sysinfo,,,"2",1351900164418
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1351900164418
+java.runtime.version,sysinfo,,,"1.6.0_22-b04-307-10M3811",1351900164418
+java.specification.name,sysinfo,,,"Java Platform API Specification",1351900164418
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1351900164418
+java.specification.version,sysinfo,,,"1.6",1351900164418
+java.vendor,sysinfo,,,"Apple Inc.",1351900164418
+java.version,sysinfo,,,"1.6.0_22",1351900164418
+java.vm.info,sysinfo,,,"mixed mode",1351900164418
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1351900164418
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1351900164418
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1351900164418
+java.vm.specification.version,sysinfo,,,"1.0",1351900164418
+java.vm.vendor,sysinfo,,,"Apple Inc.",1351900164418
+java.vm.version,sysinfo,,,"17.1-b03-307",1351900164418

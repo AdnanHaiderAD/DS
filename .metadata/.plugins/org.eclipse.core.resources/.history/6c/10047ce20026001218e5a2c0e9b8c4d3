@@ -198,19 +198,9 @@ public class InputNode implements Runnable{
 		if (gettableUpdate()){
 		settableUpdate(false);	
 		InputCommand.sendProcess(this.name);
-		if (!Input.linkfail){
-			 Input.thread_fin+=1;
-			}else{
-				Input.linkRec+=1;
-			}
-		
+		Input.thread_fin+=1;
 		}else{
-			if (!Input.linkfail){
-			 Input.thread_fin+=1;
-			}else{
-				Input.linkRec+=1;
-			}
-		 
+		Input.thread_fin+=1;
 		}
 		}
 

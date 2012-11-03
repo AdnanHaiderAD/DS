@@ -11,4 +11,6 @@ link p4 p3
 link p2 p5
 link p4 p5
 
-send p4 
+send p4
+link-fail p4 p5
+link-fail p1 p2 

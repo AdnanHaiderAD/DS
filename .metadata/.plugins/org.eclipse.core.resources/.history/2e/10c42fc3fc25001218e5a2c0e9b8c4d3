@@ -2,7 +2,7 @@ package RIP;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.LinkedList;
@@ -20,9 +20,6 @@ static Hashtable<String,InputNode>  lookupTable = new Hashtable<String,InputNode
 static JFileChooser openfile;
 static int thread_num=0;
 static int thread_fin =0;
-static int linkSend=0;
-static int linkRec=0;
-static boolean  linkfail=false;
 static LinkedList <Tuple<String,String>> linkFail = new LinkedList<Tuple<String,String>>();
 
 public static void main(String[] args){
@@ -90,10 +87,9 @@ public static void main(String[] args){
 				}
  			}
  			if (linkFail.size()!=0){
- 			linkfail=true;	
  			performLinkFailures() ;
  			}
- 			while (linkSend!= linkRec){
+ 			while (thread_num!= thread_fin){
  				try {
 					Thread.currentThread().sleep(1);
 				} catch (InterruptedException e) {

@@ -26,12 +26,7 @@ public class InputCommand {
 	for (Thread update: ConcurrentE){
 		
 		update.start();
-		if (!Input.linkfail){
 		Input.thread_num+=1;
-		}else{
-			Input.linkSend+=1;
-		}
-		
 		 
 		 }	
 	 
