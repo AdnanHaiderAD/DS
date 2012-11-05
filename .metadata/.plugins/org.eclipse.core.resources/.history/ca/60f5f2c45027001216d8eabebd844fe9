@@ -11,15 +11,11 @@ public class InputNode implements Runnable{
 	private String name;
 	private int[] addresses;
 	private boolean tableUpdated=false;
-	
-	/* The current list of senders whose routing tables have been queued at the current node*/
 	LinkedList<String> Senders= new LinkedList<String>();
-	/*List of routing tables received by the node*/
-	LinkedList<Hashtable<Integer,LinkCost>> senderQue=new LinkedList<Hashtable<Integer,LinkCost>>();
 	
+	LinkedList<Hashtable<Integer,LinkCost>> senderQue=new LinkedList<Hashtable<Integer,LinkCost>>();
 	/*the routing table of the corresponding node */
 	private  Hashtable<Integer,LinkCost> routingTable = null;
-	
 	/* list of the nodes that are linked to the current node*/
 	ArrayList<String> links= null;
 	
@@ -52,8 +48,6 @@ public class InputNode implements Runnable{
 	public Hashtable<Integer, LinkCost> getRoutingTable(){
 		return routingTable;
 	}
-	
-	/* the process generates a copy of its routing table to send to its neighbors whenever it experiences a change in its routing table*/
 	public Hashtable<Integer,LinkCost> copyRoutingTable(){
 		Hashtable<Integer,LinkCost> sendingTable = new Hashtable<Integer,LinkCost>(routingTable.size());
 		for (Enumeration<Integer> e = routingTable.keys(); e.hasMoreElements();){
@@ -83,14 +77,14 @@ public class InputNode implements Runnable{
 		while (e.hasMoreElements()){
 			Integer address= (Integer) e.nextElement();
 		    LinkCost linkcost = senderTable.get(address);
-		    if (linkcost.link.equals("no-link")|| linkcost.cost==Integer.MAX_VALUE){
+		    if (linkcost.link.equals("no-link")){
 		    	info = info.concat(" ( "+address+ "|" + linkcost.link +"|"+   " i) ");
 		    }else{
 		    	info = info.concat(" ( "+address+ "|" + linkcost.link +"|"+ linkcost.cost + ") ");	
 		    }
 		}
 		System.out.println("send "+sender +" " + getName()+info);
-		System.out.println("receive "+ sender + " "+ getName() + info);
+		System.out.println(" receive "+ sender + " "+ getName() + info);
 		
 		
 		/*RIP protocol */
@@ -130,7 +124,21 @@ public class InputNode implements Runnable{
 			 }
 		}
 		
+			if (gettableUpdate()){
 			
+		/* print the  updated table */
+				Enumeration<Integer> e2= routingTable.keys();
+				String inform= this.getName();
+			//	System.out.println(getName()+ "has been updated:"+ gettableUpdate());
+				
+				while (e2.hasMoreElements()){
+						Integer address= (Integer) e2.nextElement();
+						inform = inform.concat(" ( "+address+ "|" + routingTable.get(address).link +"|"+ routingTable.get(address).cost + ") ");
+				}
+				//System.out.println(inform);
+			}else{
+				//System.out.println(getName()+ "has been updated:"+ gettableUpdate());
+			}
 		
 	}
 	
@@ -184,7 +192,7 @@ public class InputNode implements Runnable{
 			
 		//Rip protocol
 	
-	
+		//System.out.println(this.name+"s size of the list is " +senderQue.size());
 		receiveTable();
 		
 		

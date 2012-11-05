@@ -1,0 +1,18 @@
+node p1 1
+node p2 2
+node p3 3
+node p7 7 
+node p8 8
+node p9 9
+
+link p1 p2
+link p2 p3
+link p3 p7
+link p7 p1
+link p8 p7
+link p8 p9
+link p9 p1
+
+
+send p3
+link-fail p1 p9

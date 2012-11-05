@@ -24,7 +24,7 @@ public class InputCommand {
 		}
 	
 	for (Thread update: ConcurrentE){
-		/* simultaneously send copies of the updated routing table to all the neighbors*/
+		/* simaltaneously send copies the updated routing table to all the neighbors*/
 		update.start();
 		if (!Input.linkfail){
 		Input.thread_num+=1;

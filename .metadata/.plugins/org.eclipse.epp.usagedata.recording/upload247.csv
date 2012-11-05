@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1352122999911
+java.specification.version,sysinfo,,,"1.6",1352122999911
+java.vendor,sysinfo,,,"Apple Inc.",1352122999911
+java.version,sysinfo,,,"1.6.0_22",1352122999911
+java.vm.info,sysinfo,,,"mixed mode",1352122999911
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1352122999911
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1352122999911
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1352122999911
+java.vm.specification.version,sysinfo,,,"1.0",1352122999911
+java.vm.vendor,sysinfo,,,"Apple Inc.",1352122999911
+java.vm.version,sysinfo,,,"17.1-b03-307",1352122999911
+error,log,,,"Internal Error",1352123018088
+started,bundle,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui",1352123021047
+started,bundle,org.eclipse.wst.server.core,1.1.102.v20090825,"org.eclipse.wst.server.core",1352123021121
+started,bundle,org.eclipse.wst.server.ui,1.1.103.v20090909,"org.eclipse.wst.server.ui",1352123021135
+started,bundle,org.eclipse.jdt.debug,3.5.0.v20090526,"org.eclipse.jdt.debug",1352123021183
+started,bundle,org.eclipse.jdt.debug.ui,3.4.1.v20090811_r351,"org.eclipse.jdt.debug.ui",1352123021229
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1352123022178
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1352123028185
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1352123029760
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1352123114164
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1352123114647
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1352123128191
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1352123131314
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1352123155563

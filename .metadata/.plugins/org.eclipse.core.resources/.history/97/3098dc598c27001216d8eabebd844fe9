@@ -15,7 +15,7 @@ public class InputCommand {
 	
 	for (String receiver:receivers){
 	Input.lookupTable.get(receiver).receiveMsgFrom(sender, Input.lookupTable.get(sender).copyRoutingTable());
-		
+		//Input.lookupTable.get(receiver).receiveMsgFrom(sender,copies.get(receivers.indexOf(receiver)).getRoutingTable());
 		}
 	
 	for (String receiver:receivers){
@@ -24,7 +24,7 @@ public class InputCommand {
 		}
 	
 	for (Thread update: ConcurrentE){
-		/* simultaneously send copies of the updated routing table to all the neighbors*/
+		
 		update.start();
 		if (!Input.linkfail){
 		Input.thread_num+=1;
