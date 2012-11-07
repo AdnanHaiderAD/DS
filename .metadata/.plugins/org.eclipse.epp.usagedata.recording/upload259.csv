@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.wst.web,1.1.301.v200909021400,"org.eclipse.wst.web",1352304711440
+started,bundle,org.eclipse.wst.xml.core,1.1.401.v200908242115,"org.eclipse.wst.xml.core",1352304711458
+os,sysinfo,,,"macosx",1352304711462
+arch,sysinfo,,,"x86",1352304711462
+ws,sysinfo,,,"cocoa",1352304711462
+locale,sysinfo,,,"en_US",1352304711462
+processors,sysinfo,,,"2",1352304711462
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1352304711462
+java.runtime.version,sysinfo,,,"1.6.0_22-b04-307-10M3811",1352304711462
+java.specification.name,sysinfo,,,"Java Platform API Specification",1352304711462
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1352304711462
+java.specification.version,sysinfo,,,"1.6",1352304711462
+java.vendor,sysinfo,,,"Apple Inc.",1352304711462
+java.version,sysinfo,,,"1.6.0_22",1352304711462
+java.vm.info,sysinfo,,,"mixed mode",1352304711462
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1352304711462
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1352304711462
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1352304711462
+java.vm.specification.version,sysinfo,,,"1.0",1352304711462
+java.vm.vendor,sysinfo,,,"Apple Inc.",1352304711462
+java.vm.version,sysinfo,,,"17.1-b03-307",1352304711462
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1352304711516
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1352304711550
+started,bundle,org.eclipse.mylyn.bugzilla.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.bugzilla.ui",1352304711615
+started,bundle,org.eclipse.ui.forms,3.4.1.v20090714_35x,"org.eclipse.ui.forms",1352304711759
