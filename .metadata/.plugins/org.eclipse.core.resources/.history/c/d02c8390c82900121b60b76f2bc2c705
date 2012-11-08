@@ -65,21 +65,6 @@ public class InputNode implements Runnable{
 	public void receiveMsgFrom(String sender, Hashtable<Integer,LinkCost>senderTable){
 		Senders.add(sender);
 		this.senderQue.add(senderTable);
-
-		String info="";
-		Enumeration<Integer> e= senderTable.keys();
-		/* the node acknowledges receive of data */
-		while (e.hasMoreElements()){
-			Integer address= (Integer) e.nextElement();
-		    LinkCost linkcost = senderTable.get(address);
-		    if (linkcost.link.equals("no-link")|| linkcost.cost==Integer.MAX_VALUE){
-		    	info = info.concat(" ( "+address+ "|" + linkcost.link +"|"+   " i) ");
-		    }else{
-		    	info = info.concat(" ( "+address+ "|" + linkcost.link +"|"+ linkcost.cost + ") ");	
-		    }
-		}
-		
-		System.out.println("send "+ sender + " "+ getName() + info);
 	}
 	public  synchronized void receiveTable(){
 		settableUpdate(false);
@@ -104,7 +89,7 @@ public class InputNode implements Runnable{
 		    	info = info.concat(" ( "+address+ "|" + linkcost.link +"|"+ linkcost.cost + ") ");	
 		    }
 		}
-		
+		System.out.println("send "+sender +" " + getName()+info);
 		System.out.println("receive "+ sender + " "+ getName() + info);
 		
 		
